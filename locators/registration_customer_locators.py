@@ -1,0 +1,28 @@
+
+
+class RegistrationCustomerLocators:
+
+    CHECK_TEXT_STEP1 = ("xpath", "//h2[text()='Introduce yourself']")
+    FIRST_NAME_ENTER = ("xpath", "//input[@id='introduce-customer_name']")
+    LAST_NAME_ENTER = ("xpath", "//input[@id='introduce-customer_surname']")
+    COMPANY_NAME = ("xpath", "//input[@id='introduce-customer_company_name']")
+    JOB_TITLE = ("xpath", "(//span[@class='ant-select-selection-search'])[1]")
+    SELECT_JOB_TITLE = ("xpath", "//div[@title='CEO']")
+    COUNTRY = ("xpath", "(//span[@class='ant-select-selection-search'])[2]")
+    SELECT_COUNTRY = ("xpath", "//div[@title='Albania']")
+    CITY = ("xpath", "//input[@id='introduce-customer_city']")
+    SELECT_CITY = ("xpath", "//div[@title='Elbasan']")
+    NEXT_STEP_BUTTON = ("xpath", "//button[text()='Next step']")
+    PASSWORD_ENTER = ("xpath", "//input[@id='security_password']")
+    REPEAT_PASSWORD_ENTER = ("xpath", "//input[@id='security_password_confirmation']")
+    EMAIL = ("xpath", "//input[@type='email']")
+    PHONE_NUMBER = ("xpath", "//input[@type='tel']")
+    NEXT_STEP_BUTTON2 = ("xpath", "(//button[@type='submit'])[2]")
+    COVER_LETTER = ("xpath", "//textarea[@placeholder='Cover letter']")
+    SOCIAL_MEDIA_LINKS1 = ("xpath", "//input[@ placeholder ='https:/www.behance.com/']")
+    SOCIAL_MEDIA_LINKS2 = ("xpath", "//input[@ placeholder ='https://www.linkedin.com']")
+    SOCIAL_MEDIA_LINKS3 = ("xpath", "//input[@ placeholder ='https:/www.dribbble.com/']")
+    SOCIAL_MEDIA_LINKS4 = ("xpath", "//input[@ placeholder ='https:/www.facebook.com/']")
+    SOCIAL_MEDIA_LINKS5 = ("xpath", "//input[@ placeholder ='https:/www.xing.com/']")
+    CHECKBOX_REGISTR_FINISH = ("xpath", "//input[@type='checkbox']")
+    FINISH_BUTTON = ("xpath", "//button[text()='Finish']")
