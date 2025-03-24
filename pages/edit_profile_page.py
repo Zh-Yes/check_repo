@@ -9,13 +9,6 @@ class ProfileEditPage(BasePage):
     PAGE_URL = Links.EDIT_PROFILE
     locators = EditProfileLocators()
 
-    # CLEAR_FIRST_NAME = ("xpath", "(//span[@class='ant-input-clear-icon'])[1]")
-    # FIRST_NAME_FIELD = ("xpath", "//input[@type='text']")
-    # CHECKBOX = ("xpath", "//input[@type='checkbox']")
-    # SAVE_BUTTON = ("xpath", "//button[@type='submit']")
-    # DONE_BUTTON = ("xpath", "//button[text()='Done']")
-    # CHECK_MESSAGE = ("xpath", "//h2[text()='Successfully']")
-
     @allure.step("Click clear name")
     def click_clear(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.CLEAR_FIRST_NAME)).click()
@@ -34,12 +27,12 @@ class ProfileEditPage(BasePage):
     def click_save(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.SAVE_BUTTON)).click()
 
-    @allure.step("Click Done")
-    def click_done(self):
-        self.wait.until(EC.element_to_be_clickable(self.locators.DONE_BUTTON)).click()
-
     @allure.step("Check message")
     def check_message(self):
         successfully_text = "Successfully"
         return self.wait.until(EC.text_to_be_present_in_element(self.locators.CHECK_MESSAGE, successfully_text))
+
+    @allure.step("Click Done")
+    def click_done(self):
+        self.wait.until(EC.element_to_be_clickable(self.locators.DONE_BUTTON)).click()
 
