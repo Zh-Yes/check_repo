@@ -9,9 +9,6 @@ class HomePage(BasePage):
     PAGE_URL = Links.HOME_PAGE
     locators = HomePageLocators()
 
-    #DROPDOWN_BUTTON = ("xpath", "//button[@class='ant-dropdown-trigger position-relative cursor-pointer']")
-    #YOUR_PROFILE = ("xpath", "(//span[@class='ant-dropdown-menu-title-content'])[1]")
-
     @allure.step("Click menu")
     def click_menu(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.DROPDOWN_BUTTON)).click()
@@ -19,3 +16,7 @@ class HomePage(BasePage):
     @allure.step("Click Your profile")
     def click_your_profile(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.YOUR_PROFILE)).click()
+
+    def click_messages(self):
+        self.wait.until(EC.element_to_be_clickable(self.locators.MESSAGES)).click()
+
