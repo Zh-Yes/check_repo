@@ -13,6 +13,7 @@ class ProfileEditPage(BasePage):
     def click_clear(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.CLEAR_FIRST_NAME)).click()
 
+    @allure.step("Change name")
     def change_name(self, new_name):
         with allure.step(f"Change name on '{new_name}'"):
             self.wait.until(EC.element_to_be_clickable(self.locators.FIRST_NAME_FIELD)).send_keys(new_name)
@@ -26,11 +27,8 @@ class ProfileEditPage(BasePage):
     @allure.step("Save changes")
     def click_save(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.SAVE_BUTTON)).click()
-
-    @allure.step("Check message")
-    def check_message(self):
         successfully_text = "Successfully"
-        return self.wait.until(EC.text_to_be_present_in_element(self.locators.CHECK_MESSAGE, successfully_text))
+        assert self.wait.until(EC.text_to_be_present_in_element(self.locators.CHECK_MESSAGE, successfully_text))
 
     @allure.step("Click Done")
     def click_done(self):

@@ -17,6 +17,15 @@ class HomePage(BasePage):
     def click_your_profile(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.YOUR_PROFILE)).click()
 
+    @allure.step("Click messages")
     def click_messages(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.MESSAGES)).click()
+
+    @allure.step("Click settings")
+    def click_settings(self):
+        self.wait.until(EC.element_to_be_clickable(self.locators.SETTINGS)).click()
+
+    @allure.step("Click payments")
+    def click_payments(self):
+        self.wait.until(EC.element_to_be_clickable(self.locators.PAYMENTS)).click()
 
