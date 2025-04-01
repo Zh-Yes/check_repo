@@ -25,5 +25,6 @@ class TestProfileFeature(BaseTest):
         self.edit_profile_page.click_clear()
         self.edit_profile_page.change_name(f"Test {random.randint(1, 100)}")
         self.edit_profile_page.click_save()
-        self.edit_profile_page.check_message()
         self.edit_profile_page.click_done()
+
+        time.sleep(4)

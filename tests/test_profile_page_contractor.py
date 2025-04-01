@@ -6,9 +6,9 @@ from base.base_test import BaseTest
 from faker import Faker
 
 @allure.feature("Contractor Profile Page")
-class TestProfilePage(BaseTest):
+class TestProfilePageContractor(BaseTest):
 
-    def test_profile_page(self):
+    def test_profile_page_contractor(self):
         self.welcome_page.open()
         self.welcome_page.click_log_in()
         self.welcome_page.enter_login(self.data.LOGIN_CONTRACTOR)
@@ -28,3 +28,5 @@ class TestProfilePage(BaseTest):
         self.profile_page.click_done()
         self.profile_page.click_reviews()
         self.profile_page.click_work()
+
+        time.sleep(4)

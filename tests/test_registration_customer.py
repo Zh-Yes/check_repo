@@ -42,5 +42,5 @@ class TestRegistrationCustomer(BaseTest):
         self.registration_customer_page.click_finish()
         self.home_page.is_opened()
 
-        time.sleep(10)
+        time.sleep(5)
 

@@ -31,28 +31,36 @@ class WelcomePage(BasePage):
     def click_get_started(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.GET_STARTED_BUTTON)).click()
 
+    @allure.step("Click Discover more")
     def click_discover_more(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.DISCOVER_MORE_BUTTON)).click()
 
+    @allure.step("Click For specialist")
     def click_for_specialist(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.FOR_SPECIALIST)).click()
 
+    @allure.step("Check header text")
     def check_header_text(self):
         text_header = "Empower your independence, unleash your creativity!"
         return self.wait.until(EC.text_to_be_present_in_element(self.locators.TEXT1, text_header))
 
+    @allure.step("Click For employer")
     def click_for_employer(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.FOR_EMPLOYER)).click()
 
+    @allure.step("Check header text")
     def check_header_text_2(self):
         text_header = "Find the best talent, get the job done"
         return self.wait.until(EC.text_to_be_present_in_element(self.locators.TEXT2, text_header))
 
+    @allure.step("Click FAQ")
     def click_faq(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.FAQ)).click()
 
+    @allure.step("Click first FAQ")
     def click_first_faq(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.FIRST_FAQ)).click()
 
+    @allure.step("Click second FAQ")
     def click_second_faq(self):
         self.wait.until(EC.element_to_be_clickable(self.locators.SECOND_FAQ)).click()

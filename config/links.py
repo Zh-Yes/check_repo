@@ -14,3 +14,5 @@ class Links:
     PROFILE_PAGE = f"{HOME_PAGE}profile"
     EDIT_PROFILE = f"{HOME_PAGE}profile/edit"
     MESSAGES_PAGE = f"{HOME_PAGE}messages"
+    SETTINGS_PAGE = f"{HOME_PAGE}settings"
+    PAYMENTS_PAGE = f"{HOME_PAGE}payments"

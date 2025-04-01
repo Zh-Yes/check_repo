@@ -13,6 +13,7 @@ class RegistrationTypePage(BasePage):
     def select_customer_type(self):
         self.wait.until(EC.presence_of_element_located(self.locators.SELECT_CUSTOMER_TYPE)).click()
 
+    @allure.step("Select Contractor type")
     def select_contractor_type(self):
         self.wait.until(EC.presence_of_element_located(self.locators.SELECT_CONTRACTOR_TYPE)).click()
 
