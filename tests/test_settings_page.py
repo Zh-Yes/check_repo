@@ -32,7 +32,7 @@ class TestSettings(BaseTest):
         self.settings_page.click_save_3()
         self.settings_page.click_done_3()
 
-        time.sleep(3)
+        time.sleep(2)
 
     @allure.feature("Check settings contractor")
     @allure.story("Проверка всех полей")
